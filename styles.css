@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 20px; /* Overall page border margin */
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.navbar a.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem; /* More margin for the logo on the left */
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline;
+  margin-left: 1rem;
+}
+
+.hero {
+  height: 60vh;
+  display: flex;
+  flex-direction: column; /* Ensure h1 and p are on separate lines */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem; /* Add space between h1 and p */
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+/* ... Previous CSS code ... */
+
+.about {
+  padding: 2rem 0; /* Reduced top and bottom margin */
+}
+
+.contact {
+  padding: 4rem 0;
+}
+
+.contact p a {
+  color: #333;
+  text-decoration: underline;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly; /* Evenly align social media links */
+  margin-top: 1rem;
+}
+
+.social-media a {
+  color: white;
+  margin-right: 1rem;
+}
+
+/* ... Previous CSS code ... */
+
+.social-media a {
+  color: white;
+  margin-right: 1rem;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
