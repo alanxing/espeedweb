@@ -63,10 +63,13 @@ a {
   font-size: 1.5rem;
 }
 
-/* ... Previous CSS code ... */
-
 .about {
   padding: 2rem 0; /* Reduced top and bottom margin */
+}
+
+.about p {
+  margin-top: 1rem; /* Add space before and after each paragraph */
+  margin-bottom: 1rem;
 }
 
 .contact {
@@ -85,22 +88,9 @@ footer {
   text-align: center;
 }
 
-.social-media {
-  display: flex;
-  justify-content: space-evenly; /* Evenly align social media links */
-  margin-top: 1rem;
-}
-
 .social-media a {
   color: white;
-  margin-right: 1rem;
-}
-
-/* ... Previous CSS code ... */
-
-.social-media a {
-  color: white;
-  margin-right: 1rem;
+  margin-right: 1rem; /* Reduce space between social media links */
 }
 
 .social-media a:last-child {
