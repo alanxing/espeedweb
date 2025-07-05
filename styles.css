@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #0E7AFE;
+  --secondary: #00E6FF;
+  --dark: #041C32;
+  --light-bg: #F5F7FA;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +21,7 @@ body {
 }
 
 a {
-  color: #333;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -77,7 +86,7 @@ a {
 }
 
 .contact p a {
-  color: #333;
+  color: var(--primary);
   text-decoration: underline;
 }
 
@@ -89,10 +98,70 @@ footer {
 }
 
 .social-media a {
-  color: white;
+  color: #fff;
   margin-right: 1rem; /* Reduce space between social media links */
 }
 
 .social-media a:last-child {
   margin-right: 0;
+}
+
+/* Hover states */
+.nav-links li a:hover,
+.nav-links li a:focus,
+.social-media a:hover,
+.social-media a:focus,
+a:hover,
+a:focus {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Windsurf.com inspired theme overrides */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark);
+  margin: 0;
+}
+
+.navbar {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.navbar a.logo,
+.nav-links li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hero {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+footer {
+  background-color: var(--dark);
+  color: #fff;
+}
+
+.social-media a {
+  color: #fff;
+  transition: opacity 0.2s ease;
 }
