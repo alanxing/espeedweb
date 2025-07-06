@@ -81,6 +81,16 @@ a {
   margin-bottom: 1rem;
 }
 
+.logo-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.logo {
+  max-width: 300px;
+  height: auto;
+}
+
 .contact {
   padding: 4rem 0;
   text-align: center;
