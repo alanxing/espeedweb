@@ -198,6 +198,17 @@ footer {
   color: #fff;
 }
 
+/* Copyright styling */
+.copyright-break {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .copyright-break {
+    display: inline;
+  }
+}
+
 /* Mobile Responsive Adjustments */
 @media screen and (max-width: 480px) {
   .hero h1 {
