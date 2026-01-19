@@ -113,6 +113,8 @@ a:focus {
   padding: 0 6px;
   word-wrap: break-word;
   color: var(--muted);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 footer {
