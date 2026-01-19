@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary: #0E7AFE;
-  --secondary: #00E6FF;
-  --dark: #041C32;
-  --light-bg: #F5F7FA;
+  --bg: #f5f7fa;
+  --ink: #0c0e13;
+  --muted: #4b5563;
+  --accent: #00d7db;
+  --accent-strong: #0098a3;
+  --card: rgba(255, 255, 255, 0.82);
+  --border: rgba(12, 14, 19, 0.06);
 }
 
 * {
@@ -18,24 +21,29 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: var(--dark);
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  color: var(--ink);
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: var(--light-bg);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(0, 215, 219, 0.12), transparent 36%),
+    radial-gradient(circle at 88% 8%, rgba(12, 14, 19, 0.08), transparent 28%),
+    var(--bg);
 }
 
 a {
-  color: var(--primary);
+  color: var(--accent-strong);
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  font-weight: 500;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 a:hover,
 a:focus {
-  opacity: 0.8;
+  color: var(--accent);
+  opacity: 0.9;
   text-decoration: underline;
 }
 
@@ -46,59 +54,80 @@ a:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  color: #fff;
-  min-height: 60vh;
+  min-height: 70vh;
   width: 100%;
-  padding: 20px;
+  padding: 110px 22px 96px;
   box-sizing: border-box;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  word-wrap: break-word;
-  max-width: 100%;
-  padding: 0 10px;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  max-width: 100%;
-  padding: 0 10px;
-  word-wrap: break-word;
+  max-width: 980px;
+  margin: 0 auto;
+  gap: 1.25rem;
 }
 
 .logo-container {
-  padding: 1.5rem 0;
+  padding: 18px 20px;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 16px 46px rgba(12, 14, 19, 0.08);
+  backdrop-filter: blur(6px);
 }
 
 .logo {
-  max-width: 300px;
-  width: 90%;
+  width: 180px;
+  max-width: 44vw;
   height: auto;
   transition: opacity 0.3s ease;
 }
 
 .logo:hover {
-  opacity: 0.9;
+  opacity: 0.92;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 3.6rem);
+  font-weight: 600;
+  word-wrap: break-word;
+  max-width: 100%;
+  padding: 0 10px;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.hero h1::after {
+  content: "";
+  width: 96px;
+  height: 4px;
+  display: block;
+  margin: 0.8rem auto 0;
+  background: linear-gradient(90deg, var(--ink), var(--accent));
+  border-radius: 999px;
+  opacity: 0.85;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  max-width: 760px;
+  padding: 0 6px;
+  word-wrap: break-word;
+  color: var(--muted);
 }
 
 footer {
-  padding: 1rem;
-  background-color: var(--dark);
-  color: #fff;
+  padding: 1.4rem 1rem 1.8rem;
+  background: linear-gradient(180deg, rgba(12, 14, 19, 0.9) 0%, #0c0e13 100%);
+  color: #f7fafc;
   text-align: center;
   margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .social-media a {
-  color: #fff;
-  margin-right: 1.5rem;
-  padding: 0.3rem 0;
+  color: #f7fafc;
+  margin-right: 1.4rem;
+  padding: 0.2rem 0;
   display: inline-block;
 }
 
@@ -106,37 +135,50 @@ footer {
   margin-right: 0;
 }
 
+.social-media a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 /* Copyright styling */
 .copyright-break {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
-  .copyright-break {
-    display: inline;
+@media screen and (max-width: 780px) {
+  .hero {
+    padding: 96px 18px 72px;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 }
 
-/* Mobile Responsive Adjustments */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2.1rem, 7vw, 2.6rem);
   }
-  
-  .hero p {
-    font-size: 1.1rem;
-  }
-  
+
   .logo {
-    max-width: 200px;
+    width: 140px;
   }
-  
+
   footer {
-    padding: 0.8rem;
+    padding: 1.1rem 0.9rem 1.5rem;
   }
-  
+
   .social-media a {
     margin-right: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .copyright-break {
+    display: inline;
   }
 }

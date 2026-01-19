@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Espeed Capital Forceful Propulsion Logo">
+  <rect width="100" height="100" fill="#F5F7FA"/>
+
+  <path fill="#00D7DB" opacity="0.2"
+        d="M10 85 C 30 85, 50 75, 70 75 L 70 78 C 50 78, 30 88, 10 88 Z"/>
+
+  <path fill="#000000"
+        d="M35 85
+           C 42 84, 48 78, 53 65
+           C 56 52, 61 35, 66 24
+           L 70 18
+           L 68 26
+           C 64 40, 61 55, 58 70
+           C 54 82, 46 88, 35 90
+           Z"/>
+
+  <path fill="#000000" d="M38 72 L 54 70 L 53 76 L 36 76 Z"/>
+  <path fill="#000000" d="M45 54 L 65 50 L 64 56 L 43 58 Z"/>
+  <path fill="#000000" d="M54 34 L 78 28 L 76 35 L 51 39 Z"/>
+
+  <circle cx="70" cy="18" r="7" fill="#00D7DB"/>
+  <circle cx="70" cy="18" r="4.5" fill="#000000"/>
+  <circle cx="70" cy="18" r="3" fill="#00D7DB"/>
+</svg>
